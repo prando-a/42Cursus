@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/21 16:04:39 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/29 17:24:33 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void	*ft_realloc(void *ptr, size_t new_size);
+int		ft_linecounter(char *str);
 int		ft_str_islf(char *str);
+void	*ft_realloc(void *ptr, size_t new_size);
+int		ft_arrnum(char **array);
+int		ft_arrlen(char **array);
+char	*ft_merge(char **array, char c, int len);
 #endif

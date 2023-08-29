@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/07/18 13:49:35 by prando-a         ###   ########.fr        #
+#    Updated: 2023/08/29 18:25:57 by prando-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,13 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
+CROM =	ft_linecounter.c ft_str_islf.c \
+		ft_realloc.c \
+		ft_arrnum.c ft_arrlen.c \
+		ft_merge.c
 OBJECTS = $(FILES:.c=.o)
 BONUS_O = $(BONUS:.c=.o)
+CROM_O  = $(CROM:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -53,11 +58,14 @@ $(NAME): $(OBJECTS)
 	gcc $(FLAGS) -c $<
 
 clean:
-	@rm -f $(OBJECTS) $(BONUS_O)
+	@rm -f $(OBJECTS) $(BONUS_O) $(CROM_O)
 fclean:
-	@rm -f $(NAME) $(OBJECTS) $(BONUS_O)
+	@rm -f $(NAME) $(OBJECTS) $(BONUS_O) $(CROM_O)
 re: fclean all
 bonus:
-	gcc $(FLAGS) -c $(BONUS) 
+	gcc $(FLAGS) -c $(BONUS_O) 
 	@ar rcs $(NAME) $(BONUS_O)
-.PHONY: all clean fclean re bonus
+crom:
+	gcc $(FLAGS) -c $(CROM) 
+	@ar rcs $(NAME) $(CROM_O)
+.PHONY: all clean fclean re bonus crom
