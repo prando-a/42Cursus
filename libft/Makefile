@@ -6,7 +6,7 @@
 #    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/08/29 18:25:57 by prando-a         ###   ########.fr        #
+#    Updated: 2023/08/29 19:19:47 by prando-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ fclean:
 	@rm -f $(NAME) $(OBJECTS) $(BONUS_O) $(CROM_O)
 re: fclean all
 bonus:
-	gcc $(FLAGS) -c $(BONUS_O) 
+	gcc $(FLAGS) -c $(BONUS) 
 	@ar rcs $(NAME) $(BONUS_O)
 crom:
 	gcc $(FLAGS) -c $(CROM) 
