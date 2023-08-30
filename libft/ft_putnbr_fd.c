@@ -6,11 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 11:10:42 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/02 12:08:41 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:40:12 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:22:15 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/22 19:14:54 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:49:42 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*reader(char *static_s, int fd)
 		buffer[bytes_read] = '\0';
 		if (!static_s)
 			static_s = ft_calloc(1, 1);
-		static_s = ft_strjoin(static_s, buffer);
+		static_s = gnl_strjoin(static_s, buffer);
 		if (!*static_s)
 			return (free(static_s), free(buffer), buffer = NULL, NULL);
 	}

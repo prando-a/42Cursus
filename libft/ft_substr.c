@@ -6,11 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 13:34:58 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/16 18:01:09 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:43:15 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

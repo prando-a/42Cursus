@@ -6,11 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 15:17:27 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/16 16:58:55 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:41:06 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

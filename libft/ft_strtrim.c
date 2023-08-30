@@ -6,11 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 15:46:33 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/21 16:06:09 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:42:50 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

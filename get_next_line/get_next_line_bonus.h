@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:47:34 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/22 16:08:27 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:50:25 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_next_line(int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(char *s1);
-char	*ft_strjoin(char *s1, char *s2);
+char	*gnl_strjoin(char *s1, char *s2);
 void	*ft_calloc(size_t count, size_t size);
 size_t	ft_strlen(const char *str);
 

@@ -6,11 +6,9 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 17:34:14 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/23 17:34:38 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:36:34 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_linecounter(char *str)
 {

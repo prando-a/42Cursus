@@ -6,13 +6,11 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 13:29:06 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/21 16:22:23 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:40:32 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	wcnt(char const *s, char c, int i1, int w)
 {

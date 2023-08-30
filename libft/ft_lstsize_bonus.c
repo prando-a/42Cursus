@@ -6,12 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 19:11:40 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/14 19:23:23 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:37:40 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)

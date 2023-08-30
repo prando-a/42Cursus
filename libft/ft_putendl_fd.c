@@ -6,11 +6,10 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 10:59:52 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/02 12:56:38 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:40:08 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

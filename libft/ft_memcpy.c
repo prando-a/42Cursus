@@ -6,11 +6,9 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 17:22:37 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/16 12:08:43 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:38:13 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stddef.h>
 
 void	*ft_memcpy(void *dst, const void *src, int n)
 {
