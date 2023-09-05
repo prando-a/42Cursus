@@ -6,13 +6,13 @@
 #    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/08/29 19:19:47 by prando-a         ###   ########.fr        #
+#    Updated: 2023/09/05 17:16:31 by prando-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+LIBFT_A = libft.a
 
-FILES = ft_isalpha.c ft_toupper.c \
+SRC = ft_isalpha.c ft_toupper.c \
 		ft_isdigit.c ft_tolower.c \
 		ft_isalnum.c ft_strchr.c \
 		ft_isascii.c ft_strrchr.c \
@@ -44,28 +44,29 @@ CROM =	ft_linecounter.c ft_str_islf.c \
 		ft_realloc.c \
 		ft_arrnum.c ft_arrlen.c \
 		ft_merge.c
-OBJECTS = $(FILES:.c=.o)
+SRC_O = $(SRC:.c=.o)
 BONUS_O = $(BONUS:.c=.o)
 CROM_O  = $(CROM:.c=.o)
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -c -o
+A_LIB = @ar rcs
 
-all: $(NAME)
+all: $(LIBFT_A)
 
-$(NAME): $(OBJECTS)
-	@ar rcs $(NAME) $(OBJECTS)
+$(LIBFT_A): $(SRC_O)
+	$(A_LIB) $(LIBFT_A) $(SRC_O)
+	
+bonus: $(BONUS_O)
+	$(A_LIB) $(LIBFT_A) $(BONUS_O)
+
+crom: $(CROM_O)
+	$(A_LIB) $(LIBFT_A) $(CROM_O)
 
 %.o:%.c
-	gcc $(FLAGS) -c $<
+	gcc $(FLAGS) $@ $<
 
 clean:
-	@rm -f $(OBJECTS) $(BONUS_O) $(CROM_O)
+	@rm -f $(SRC_O) $(BONUS_O) $(CROM_O)
 fclean:
-	@rm -f $(NAME) $(OBJECTS) $(BONUS_O) $(CROM_O)
+	@rm -f $(LIBFT_A) $(SRC_O) $(BONUS_O) $(CROM_O)
 re: fclean all
-bonus:
-	gcc $(FLAGS) -c $(BONUS) 
-	@ar rcs $(NAME) $(BONUS_O)
-crom:
-	gcc $(FLAGS) -c $(CROM) 
-	@ar rcs $(NAME) $(CROM_O)
 .PHONY: all clean fclean re bonus crom
