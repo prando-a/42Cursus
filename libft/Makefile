@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
+#    By: crom <crom@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/09/05 17:16:31 by prando-a         ###   ########.fr        #
+#    Updated: 2023/09/09 23:58:29 by crom             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBFT_A = libft.a
+NAME = libft.a
 
 SRC = ft_isalpha.c ft_toupper.c \
 		ft_isdigit.c ft_tolower.c \
@@ -50,16 +50,16 @@ CROM_O  = $(CROM:.c=.o)
 FLAGS = -Wall -Wextra -Werror -c -o
 A_LIB = @ar rcs
 
-all: $(LIBFT_A)
+all: $(NAME)
 
-$(LIBFT_A): $(SRC_O)
-	$(A_LIB) $(LIBFT_A) $(SRC_O)
+$(NAME): $(SRC_O)
+	$(A_LIB) $(NAME) $(SRC_O)
 	
 bonus: $(BONUS_O)
-	$(A_LIB) $(LIBFT_A) $(BONUS_O)
+	$(A_LIB) $(NAME) $(BONUS_O)
 
 crom: $(CROM_O)
-	$(A_LIB) $(LIBFT_A) $(CROM_O)
+	$(A_LIB) $(NAME) $(CROM_O)
 
 %.o:%.c
 	gcc $(FLAGS) $@ $<
@@ -67,6 +67,6 @@ crom: $(CROM_O)
 clean:
 	@rm -f $(SRC_O) $(BONUS_O) $(CROM_O)
 fclean:
-	@rm -f $(LIBFT_A) $(SRC_O) $(BONUS_O) $(CROM_O)
+	@rm -f $(NAME) $(SRC_O) $(BONUS_O) $(CROM_O)
 re: fclean all
 .PHONY: all clean fclean re bonus crom
