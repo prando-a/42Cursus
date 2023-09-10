@@ -1,50 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/02 14:08:47 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/10 18:24:42 by prando-a         ###   ########.fr       */
+/*   Created: 2023/09/07 16:49:15 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/07 16:50:21 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int	cifras(long n, int i)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	if (n <= 0)
-		i++;
-	while (n != 0 && ++i)
-		n /= 10;
-	return (i);
-}
+	char	*mander;
+	size_t	i;
 
-char	*ft_itoa(int n)
-{
-	char		*mander;
-	int			i;
-	long		l;
-
-	l = n;
-	i = cifras(l, 0);
-	mander = malloc(i + 1);
-	if (mander == NULL)
-		return (0);
-	if (l == 0)
-		mander[0] = '0';
-	if (l < 0)
-	{
-		l = l * -1;
-		mander[0] = '-';
-	}
-	mander[i] = '\0';
-	while (l != 0)
-	{
-		mander[--i] = (l % 10) + '0';
-		l /= 10;
-	}
+	i = -1;
+	mander = ft_calloc(ft_strlen(s) + 1, 1);
+	if (!mander)
+		return (NULL);
+	while (s[++i])
+		mander[i] = f(s[i]);
 	return (mander);
 }

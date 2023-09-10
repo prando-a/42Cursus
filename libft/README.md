@@ -1,4 +1,4 @@
-# libft + CROM functions
+# libft + ft_printf + get_next_line + CROM functions
 The first student project of 42, a library of many (maybe TOO many) C99 implementations and some really useful string and linked lists managing functions.
 Those are exactly 43 functions, bonus included. <br> <br>
 Also, aside from what must be done to get the project validated, I made some functions I found a little useful for further Cursus 

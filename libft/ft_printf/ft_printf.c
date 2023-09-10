@@ -6,11 +6,30 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 13:09:49 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/10 19:20:47 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/10 18:55:39 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	print_x(unsigned long long n, char c)
+{
+	int		print_len;
+
+	print_len = 0;
+	if (n >= 16)
+		print_len += print_x(n / 16, c);
+	if (c == 'x')
+		ft_putchar("0123456789abcdef"[n % 16]);
+	else
+		ft_putchar("0123456789ABCDEF"[n % 16]);
+	return (++print_len);
+}
+
+int	print_p(unsigned long long n)
+{
+	return (write(1, "0x", 2) + print_x(n, 'x'));
+}
 
 int	formatter(va_list args, char format)
 {
