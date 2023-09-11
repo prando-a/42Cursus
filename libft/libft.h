@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/11 18:56:20 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/11 19:07:40 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include "ft_printf/ft_printf.h"
 
 typedef struct s_list
 {
