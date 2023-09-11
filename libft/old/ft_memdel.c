@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 16:05:46 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/07 16:06:34 by prando-a         ###   ########.fr       */
+/*   Created: 2023/09/11 12:06:43 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/11 18:53:45 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_memdel(void **ap)
 {
 	int	i;
-	int	a;
 
 	i = 0;
-	a = 0;
-	while (s1[i] && s2[i] && i < n)
-	{
-		if (s1[i] == s2[i])
-			a++;
-		i++;
-	}
-	return (i == a);
+	while (ap[i])
+		free(ap[i++]);
+	free(ap);
+	ap = NULL;
 }

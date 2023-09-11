@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/02 13:08:16 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/07 16:00:25 by prando-a         ###   ########.fr       */
+/*   Created: 2023/09/07 16:49:15 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/11 18:36:24 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_striter(char *s, void (*f)(char*))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	while (s)
-		f(s);
+	char	*mander;
+	size_t	i;
+
+	i = -1;
+	mander = ft_calloc(ft_strlen(s) + 1, 1);
+	if (!mander)
+		return (NULL);
+	while (s[++i])
+		mander[i] = f(s[i]);
+	return (mander);
 }

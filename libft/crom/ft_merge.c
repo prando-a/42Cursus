@@ -6,13 +6,13 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 00:07:20 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/28 17:11:20 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/11 19:01:56 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	arr_tostr(char **array, char *mander, char c, int len)
+void	merge_scriptor(char **array, char *mander, char c, int len)
 {
 	int	i;
 	int	j;
@@ -53,6 +53,6 @@ char	*ft_merge(char **array, char c, int len)
 	mander = ft_calloc(s_len + 1, 1);
 	if (!mander)
 		return (NULL);
-	arr_tostr(array, mander, c, len);
+	merge_scriptor(array, mander, c, len);
 	return (mander);
 }

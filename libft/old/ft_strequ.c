@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrnum.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 15:30:29 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/28 17:10:27 by prando-a         ###   ########.fr       */
+/*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/07 16:05:26 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_arrnum(char **array)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	int	i;
+	int	a;
 
 	i = 0;
-	while (array[i])
+	a = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] == s2[i])
+			a++;
 		i++;
-	return (i);
+	}
+	return (i == a);
 }

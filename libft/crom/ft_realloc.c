@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:09:33 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/07 15:45:07 by prando-a         ###   ########.fr       */
+/*   Created: 2023/08/07 16:08:01 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/11 18:41:35 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_strdel(char **as)
+void	*ft_realloc(void *ptr, size_t new_size)
 {
-	int	i;
+	void	*new_ptr;
+	size_t	copy_size;
 
-	i = 0;
-	while (as[i])
-		free(as[i++]);
-	free(as);
-	as = NULL;
-}
-
-void	*ft_memalloc(size_t size)
-{
-	void	*mem;
-
-	if (!(mem = malloc(size)))
-		return (NULL);
-	ft_bzero(mem, size);
-	return (mem);
+	new_ptr = malloc(new_size);
+	if (!new_ptr)
+		return (free(ptr), NULL);
+	copy_size = 0;
+	if (ptr && new_ptr && new_size != 0)
+	{
+		if (new_size < sizeof(ptr))
+			copy_size = new_size;
+		else
+			copy_size = sizeof(ptr);
+		ft_memcpy(new_ptr, ptr, copy_size);
+	}
+	return (free(ptr), new_ptr);
 }

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_arrnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 16:35:06 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/07 16:35:08 by prando-a         ###   ########.fr       */
+/*   Created: 2023/08/23 15:30:29 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/11 18:41:18 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strnew(size_t size)
+int	ft_arrnum(char **array)
 {
-	char	*str;
+	int	i;
 
-	str = ft_calloc(size + 1, 1);
-	if (!str)
-		return (0);
-	return (str);
+	i = 0;
+	while (array[i])
+		i++;
+	return (i);
 }

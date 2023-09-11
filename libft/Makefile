@@ -6,7 +6,7 @@
 #    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/09/10 19:13:46 by prando-a         ###   ########.fr        #
+#    Updated: 2023/09/11 18:50:07 by prando-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,16 +40,14 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
-EXTRA = ft_printf/ft_printf.c ft_printf/print_cs.c \
-		ft_printf/print_diu.c get_next_line.c
-CROM =	ft_linecounter.c ft_str_islf.c \
-		ft_realloc.c \
-		ft_arrnum.c ft_arrlen.c \
-		ft_merge.c
+EXTRA = $(wildcard ft_printf/*.c) get_next_line.c
+CROM =	$(wildcard crom/*.c)
+OLD =	$(wildcard old/*.c)
 SRC_O = $(SRC:.c=.o)
 BONUS_O = $(BONUS:.c=.o)
-CROM_O  = $(CROM:.c=.o)
 EXTRA_O	= $(EXTRA:.c=.o)
+OLD_O	= $(OLD:.c=.o)
+CROM_O  = $(CROM:.c=.o)
 FLAGS = -Wall -Wextra -Werror -c -o
 A_LIB = @ar rcs
 
@@ -64,15 +62,23 @@ bonus: $(BONUS_O)
 extra: $(EXTRA_O)
 	$(A_LIB) $(NAME) $(EXTRA_O)
 
+old: $(OLD_O)
+	$(A_LIB) $(NAME) $(OLD_O)
+
 crom: $(CROM_O)
 	$(A_LIB) $(NAME) $(CROM_O)
 
 %.o:%.c
 	gcc $(FLAGS) $@ $<
-	
+
+
 clean:
-	@rm -f $(SRC_O) $(BONUS_O) $(CROM_O) $(EXTRA_O)
-fclean:
-	@rm -f $(NAME) $(SRC_O) $(BONUS_O) $(CROM_O) $(EXTRA_O)
+	@rm -f $(SRC_O) $(BONUS_O) $(EXTRA_O) $(OLD_O) $(CROM_O)
+
+fclean: clean
+	@rm -f $(NAME)
+
 re: fclean all
-.PHONY: all clean fclean re bonus crom extra
+
+
+.PHONY: all clean fclean re bonus extra old crom

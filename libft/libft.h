@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/10 15:36:15 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:56:20 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,19 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*get_next_line(int fd);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char*));
+char	*ft_strmap(char const *s, char (*f)(char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+int		ft_fndchr(char *str, char c);
 int		ft_linecounter(char *str);
 int		ft_str_islf(char *str);
 void	*ft_realloc(void *ptr, size_t new_size);
 int		ft_arrnum(char **array);
 int		ft_arrlen(char **array);
 char	*ft_merge(char **array, char c, int len);
-char	*get_next_line(int fd);
 #endif

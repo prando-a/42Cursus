@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrlen.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 01:21:53 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/28 17:10:58 by prando-a         ###   ########.fr       */
+/*   Created: 2023/09/07 16:46:45 by prando-a          #+#    #+#             */
+/*   Updated: 2023/09/11 18:39:35 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_arrlen(char **array)
+void	ft_strclr(char *s)
 {
-	int	i;
-	int	len;
-
-	i = 0;
-	len = 0;
-	while (array[i])
-		len += ft_strlen(array[i++]);
-	return (len);
+	while (*s)
+		*s++ = 0;
 }
