@@ -6,7 +6,7 @@
 #    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/09/11 18:50:07 by prando-a         ###   ########.fr        #
+#    Updated: 2023/09/12 14:51:43 by prando-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,15 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
-EXTRA = $(wildcard ft_printf/*.c) get_next_line.c
-CROM =	$(wildcard crom/*.c)
-OLD =	$(wildcard old/*.c)
+EXTRA = ft_printf/ft_printf.c ft_printf/print_cs.c \
+		ft_printf/print_diu.c get_next_line.c
+CROM =	crom/ft_fndchr.c crom/ft_linecounter.c \
+		crom/ft_str_islf.c crom/ft_realloc.c \
+		crom/ft_arrnum.c crom/ft_arrlen.c \
+		crom/ft_merge.c
+OLD =	old/ft_memdel.c old/ft_strdel.c old/ft_strclr.c \
+		old/ft_striter.c old/ft_strmap.c \
+		old/ft_strequ.c old/ft_strnequ.c
 SRC_O = $(SRC:.c=.o)
 BONUS_O = $(BONUS:.c=.o)
 EXTRA_O	= $(EXTRA:.c=.o)
