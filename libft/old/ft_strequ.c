@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/07 16:05:26 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/24 23:21:50 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_strequ(char const *s1, char const *s2)
 
 	i = 0;
 	a = 0;
+	if (!*s1 || !*s2)
+		return (0);
 	while (s1[i] && s2[i])
 	{
 		if (s1[i] == s2[i])

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_islf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 15:57:23 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/30 13:40:46 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:27:41 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	float_checker(char *str, int *i, int *num_check)
+#include "../libft.h"
+
+int	float_checker(char *str, int *i, int *check)
 {
 	int	sym_lock;
 
@@ -20,39 +22,37 @@ int	float_checker(char *str, int *i, int *num_check)
 		if (str[*i] == '.')
 		{
 			if (sym_lock++ == 0 && str[*i + 1] >= '0' && str[*i + 1] <= '9')
-				(*num_check)++;
+				(*check)++;
 		}
 		if (str[*i] >= '0' && str[*i] <= '9')
-			(*num_check)++;
+			(*check)++;
 		(*i)++;
 	}
-	return (sym_lock);
+	return (sym_lock && (*check == *i));
 }
 
 int	ft_str_islf(char *str)
 {
 	int	i;
-	int	num_check;
+	int	check;
 	int	sym_lock;
-	int	float_check;
 
-	i = 0;
-	num_check = 0;
+	i = -1;
+	check = 0;
 	sym_lock = 0;
-	while (str[i] && str[i] != '.')
+	if (!*str)
+		return (0);
+	while (str[++i] && str[i] != '.')
 	{
-		if (str[i] == '-' || str[i] == '+')
+		if (str[0] == '-' || str[0] == '+')
 		{
 			if (sym_lock++ == 0 && str[i + 1] >= '0' && str[i + 1] <= '9')
-				num_check++;
+				check++;
 		}
 		if (str[i] >= '0' && str[i] <= '9')
-			num_check++;
-		i++;
+			check++;
 	}
-	float_check = float_checker(str, &i, &num_check);
-	if (num_check == i)
-		return (1 + float_check);
-	else
+	if (check == 0)
 		return (0);
+	return (float_checker(str, &i, &check) + (check == i));
 }

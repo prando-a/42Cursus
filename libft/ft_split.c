@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 13:29:06 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/30 13:40:32 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/09/14 13:06:43 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,21 +97,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (mander);
 }
-
-// int	main(void)
-// {
-// 	char const *s = "xholaxbuenasxxtardesxxx";
-// 	char **result = ft_split(s, 'x');
-
-// 	if (result == NULL)
-// 		return (1);
-// 	int i = 0;
-// 	while (result[i] != NULL)
-// 	{
-// 		printf("%s\n", result[i]);
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	return (0);
-// }

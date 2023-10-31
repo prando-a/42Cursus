@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_merge.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 00:07:20 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/11 19:01:56 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/10/23 00:29:22 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,12 @@ char	*ft_merge(char **array, char c, int len)
 	int		s_len;
 
 	s_len = 0;
-	if (!array)
-		return (NULL);
+	while (array[s_len])
+	{
+		if (!array[s_len++][0])
+			return (NULL);
+	}
+	s_len = 0;
 	if (c != '\0')
 	{
 		while (array[s_len])
@@ -53,6 +57,5 @@ char	*ft_merge(char **array, char c, int len)
 	mander = ft_calloc(s_len + 1, 1);
 	if (!mander)
 		return (NULL);
-	merge_scriptor(array, mander, c, len);
-	return (mander);
+	return (merge_scriptor(array, mander, c, len), mander);
 }

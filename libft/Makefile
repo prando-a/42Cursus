@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
+#    By: crom <crom@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/09/12 14:51:43 by prando-a         ###   ########.fr        #
+#    Updated: 2023/10/21 15:09:46 by crom             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRC = 	ft_isalpha.c ft_toupper.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+BONUS = ft_lstsize_bonus.c ft_lstlast_bonus.c
+#		ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c ft_lstlast_bonus.c \
 		ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c \
@@ -45,7 +46,7 @@ EXTRA = ft_printf/ft_printf.c ft_printf/print_cs.c \
 CROM =	crom/ft_fndchr.c crom/ft_linecounter.c \
 		crom/ft_str_islf.c crom/ft_realloc.c \
 		crom/ft_arrnum.c crom/ft_arrlen.c \
-		crom/ft_merge.c
+		crom/ft_merge.c crom/ft_arr_islf.c crom/ft_atoll.c crom/ft_arrjoin.c
 OLD =	old/ft_memdel.c old/ft_strdel.c old/ft_strclr.c \
 		old/ft_striter.c old/ft_strmap.c \
 		old/ft_strequ.c old/ft_strnequ.c
@@ -60,19 +61,34 @@ A_LIB = @ar rcs
 all: $(NAME)
 
 $(NAME): $(SRC_O)
-	$(A_LIB) $(NAME) $(SRC_O)
-	
+	@$(A_LIB) $(NAME) $(SRC_O)
+	@echo
+	@echo 35%
+	@echo
+
 bonus: $(BONUS_O)
-	$(A_LIB) $(NAME) $(BONUS_O)
+	@$(A_LIB) $(NAME) $(BONUS_O)
+	@echo
+	@echo 40%
+	@echo
 
 extra: $(EXTRA_O)
-	$(A_LIB) $(NAME) $(EXTRA_O)
+	@$(A_LIB) $(NAME) $(EXTRA_O)
+	@echo
+	@echo 50%
+	@echo
 
 old: $(OLD_O)
-	$(A_LIB) $(NAME) $(OLD_O)
+	@$(A_LIB) $(NAME) $(OLD_O)
+	@echo
+	@echo 60%
+	@echo
 
 crom: $(CROM_O)
-	$(A_LIB) $(NAME) $(CROM_O)
+	@$(A_LIB) $(NAME) $(CROM_O)
+	@echo
+	@echo 70%
+	@echo
 
 %.o:%.c
 	gcc $(FLAGS) $@ $<
