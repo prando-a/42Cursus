@@ -10,4 +10,4 @@ Simple printf implementation done in the easy way, composed of lotta writes. Fun
 ### [get_next_line](https://github.com/prando-a/42Cursus/tree/master/get_next_line)
 Reads a file descriptor and returns a line, mostly used to read files, critically needed to implement fgets when using it with STDIN. Easy to understand, memory safe in basic cases, just a delight to read. :)
 ### [push_swap](https://github.com/prando-a/42Cursus/tree/master/push_swap)
-Allegedly efficient integer sorting program. Radix was used as the main sorting core. Frankly very easy to read and very light source code.
+Allegedly efficient integer sorting program using two stacks (linked lists). Radix was used as the main sorting algorithm. Frankly very easy to read and very light source code.
