@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:06:13 by prando-a          #+#    #+#             */
-/*   Updated: 2023/11/24 12:54:12 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/11/25 22:22:00 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	after_move(t_mlxres **mlx, int x, int y)
 		mlx_image_to_window((*mlx)->mlx, (*mlx)->floor, x * 64, y * 64);
 		(*mlx)->mapdata->map[y][x] = '0';
 		(*mlx)->mapdata->collectibles--;
-		ft_printf("QUEDAN %d coleccionables\n", (*mlx)->mapdata->collectibles);
 	}
 	mlx_image_to_window((*mlx)->mlx, (*mlx)->player, x * 64, y * 64);
 	ft_printf("Número de pasos %d\n", ++steps);
