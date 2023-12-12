@@ -6,17 +6,11 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:06:13 by prando-a          #+#    #+#             */
-/*   Updated: 2023/11/25 22:22:00 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/05 12:59:19 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-typedef struct s_pos
-{
-	int	*x;
-	int	*y;
-}	t_pos;
 
 void	after_move(t_mlxres **mlx, int x, int y)
 {

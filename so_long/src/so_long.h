@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 20:21:16 by prando-a          #+#    #+#             */
-/*   Updated: 2023/11/24 12:01:29 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/05 12:59:04 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ typedef struct s_mlxres
 	mlx_image_t		*player;
 	t_mapdata		*mapdata;
 }	t_mlxres;
+
+typedef struct s_pos
+{
+	int	*x;
+	int	*y;
+}	t_pos;
 
 int			ft_printf(char const *str, ...);			// LIBFT
 void		*ft_calloc(size_t count, size_t size);

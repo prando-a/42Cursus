@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/19 00:40:31 by crom             ###   ########.fr       */
+/*   Updated: 2023/12/12 14:50:48 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "ft_printf/ft_printf.h"
+# include "push_swap.h"
 
 // typedef struct s_list
 // {

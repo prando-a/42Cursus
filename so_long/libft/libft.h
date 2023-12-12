@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/19 00:40:31 by crom             ###   ########.fr       */
+/*   Updated: 2023/12/05 14:26:01 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,14 @@
 // 	void			*content;
 // 	struct s_list	*next;
 // }	t_list;
+
+//ft_split struct, I know this shouldn't be legal
+typedef struct quesiquierebolsa
+{
+	int		i;
+	int		j;
+	int		k;
+}			t_indexes;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

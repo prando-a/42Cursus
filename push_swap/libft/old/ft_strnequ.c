@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:05:46 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/11 18:40:27 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:30:07 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	unsigned int	i;
-	unsigned int	a;
-
-	i = 0;
-	a = 0;
-	while (s1[i] && s2[i] && i < n)
+	if (!s1 || !s2 || !*s1 || !*s2)
+		return (0);
+	while (*s1 && *s2 && n--)
 	{
-		if (s1[i] == s2[i])
-			a++;
-		i++;
+		if (*(s1++) != *(s2++))
+			return (0);
 	}
-	return (i == a);
+	if (*(s1++) != *(s2++))
+		return (0);
+	return (1);
 }

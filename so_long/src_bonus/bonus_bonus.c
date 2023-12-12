@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:50:34 by prando-a          #+#    #+#             */
-/*   Updated: 2023/11/25 17:25:00 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/11/28 20:14:55 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ void	set_enemy_direction(t_mlxres **mlx, char **map, int direction)
 void	set_player_direction(t_mlxres **mlx, int x, int y, char *action)
 {
 	if (ft_strequ(action, "up"))
-		mlx_image_to_window((*mlx)->mlx, (*mlx)->player_f, x * 64, y * 64);
-	if (ft_strequ(action, "down"))
 		mlx_image_to_window((*mlx)->mlx, (*mlx)->player_b, x * 64, y * 64);
+	if (ft_strequ(action, "down"))
+		mlx_image_to_window((*mlx)->mlx, (*mlx)->player_f, x * 64, y * 64);
 	if (ft_strequ(action, "left"))
 		mlx_image_to_window((*mlx)->mlx, (*mlx)->player_l, x * 64, y * 64);
 	if (ft_strequ(action, "right"))

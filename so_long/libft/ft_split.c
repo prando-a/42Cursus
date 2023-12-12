@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 13:29:06 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/14 13:06:43 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:24:47 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,6 @@ int	strict_pass(char **izard, int i3)
 	free(izard);
 	return (0);
 }
-
-typedef struct quesiquierebolsa
-{
-	int		i;
-	int		j;
-	int		k;
-}			t_indexes;
 
 int	core_while(t_indexes *cnt, const char *s, char **mander, char c)
 {
