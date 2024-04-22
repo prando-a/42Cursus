@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:00:43 by prando-a          #+#    #+#             */
-/*   Updated: 2024/02/09 20:46:25 by prando-a         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:08:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,12 @@ int	set_shlvl(t_ms *ms)
 
 	shlvl = ft_getenv(ms->e_lst, "SHLVL", 0);
 	if (!shlvl)
-		return (ft_export("SHLVL=1", &ms->e_lst));
+		return (ft_export("SHLVL=1", &ms->e_lst, 0));
 	lvl = ft_atoi(shlvl);
 	lvl++;
 	free(shlvl);
 	shlvl = gnl_strjoin("SHLVL=", ft_itoa(lvl), 2, 1);
-	ft_export(shlvl, &ms->e_lst);
+	ft_export(shlvl, &ms->e_lst, 0);
 	return (free(shlvl), 1);
 }
 
@@ -117,7 +117,7 @@ int	ms_init(t_ms *ms, char **env)
 		return (ms->status = 2, 0);
 	ms->path = NULL;
 	ms->path = get_path(ms);
-	ft_export("SHELL=minishell", &ms->e_lst);
+	ft_export("SHELL=minishell", &ms->e_lst, 0);
 	set_shlvl(ms);
 	ms->new_env = set_env_matrix(ms->e_lst);
 	if (!ms->new_env || !ms->path)

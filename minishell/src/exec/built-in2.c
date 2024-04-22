@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   built-in2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:13:34 by prando-a          #+#    #+#             */
-/*   Updated: 2024/02/06 00:01:35 by prando-a         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:14:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ int	ft_cd(char **new_pwd, t_env **env)
 		return (free(aux), free(pwd), 1);
 	aux = gnl_strjoin("PWD=", aux, 2, 0);
 	pwd = gnl_strjoin("OLDPWD=", pwd, 2, 0);
-	return (ft_export(aux, env), ft_export(pwd, env),
-		free(aux), free(pwd), 0);
+	return (ft_export(gnl_strjoin("PWD=", getcwd(NULL, 0), 2, 0), env, 1),
+		ft_export(pwd, env, 0), free(aux), free(pwd), 0);
 }
 
 int	ft_unset(char *var, t_env *lst)
@@ -78,7 +78,7 @@ int	ft_unset(char *var, t_env *lst)
 	return (0);
 }
 
-int	ft_export(char *var, t_env **head)
+int	ft_export(char *var, t_env **head, int del)
 {
 	t_env	*p;
 
@@ -91,11 +91,16 @@ int	ft_export(char *var, t_env **head)
 		{
 			free(p->env_content);
 			p->env_content = ft_strdup(ft_strchr(var, '=') + 1);
+			if (del)
+				free(var);
 			return (0);
 		}
 		p = p->next;
 	}
-	return (ft_add_env(var, head), 0);
+	ft_add_env(var, head);
+	if (del)
+		free(var);
+	return (0);
 }
 
 int	env_manager(int mode, char **cmd, t_ms *ms)
@@ -110,7 +115,7 @@ int	env_manager(int mode, char **cmd, t_ms *ms)
 		if (!cmd[1])
 			return (ft_env(ms->e_lst));
 		while (cmd[++i])
-			status = ft_export(cmd[i], &ms->e_lst);
+			status = ft_export(cmd[i], &ms->e_lst, 0);
 	}
 	else if (mode == UNSET)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:40:24 by jose-mgo          #+#    #+#             */
-/*   Updated: 2024/02/09 23:59:47 by prando-a         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:08:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,7 @@ int			get_heredoc(char *limiter, t_exec *exc, t_ms *ms);
 int			exec_built_ins(char **cmd, t_ms *ms, t_exec *exc);
 int			env_manager(int mode, char **cmd, t_ms *ms);
 int			ft_env(t_env *lst);
-int			ft_export(char *var, t_env **head);
+int			ft_export(char *var, t_env **head, int del);
 int			ft_unset(char *var, t_env *lst);
 int			ft_cd(char **new_pwd, t_env **env);
 
