@@ -12,7 +12,7 @@ Simple printf implementation done in the easy way, composed of lotta writes. Fun
 ### [get_next_line](https://github.com/prando-a/42Cursus/tree/master/get_next_line)
 Reads a file descriptor and returns a line (read until a newline char or EOF is found), used to read files or the standard input. Easy to understand, memory safe, just a delight to read. :)
 
-### [push_swap](ttps://github.com/prando-a/42Cursus/tree/master/push_swap)
+### [push_swap](https://github.com/prando-a/42Cursus/tree/master/push_swap)
 Allegedly efficient integer sorting program using two stacks (linked lists) with limited elements movements to make development hard. Radix was used as the main sorting algorithm. Frankly very easy to read and very light source code.
 
 ### [so_long](https://github.com/prando-a/42Cursus/tree/master/so_long)
