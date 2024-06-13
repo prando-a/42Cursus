@@ -24,7 +24,7 @@ Introduction to command execution and use of pipes in C. This program takes info
 ### [minishell](https://github.com/prando-a/42Cursus/tree/master/minishell)
 First duo project (with @pepe587 as the master of parsing and signal management), and this one was a massive challenge. Implementation of a bash shell with essential features, such as a bunch of incorporated built-ins, use of system and custom environment variables, execution of undefined commands communicated by pipes, read and write into files, input history and custom signal actions. Everything with a solid front-end and an exquisite memory and file descriptors management. Uses readline() libraries.
 
-### [philosophers](https://github.com/prando-a/42Cursus/tree/master/philososphers)
+### [philosophers](https://github.com/prando-a/42Cursus/tree/master/philosophers)
 A simple implementation of the (in)famous [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) with use of threads as philos and mutexes as forks. A weird introduction to thread management with a philosophical persepctive.
 
 ### [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)
