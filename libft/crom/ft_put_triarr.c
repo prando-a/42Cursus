@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_put_triarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/24 02:05:31 by crom             ###   ########.fr       */
+/*   Created: 2024/01/03 17:11:51 by prando-a          #+#    #+#             */
+/*   Updated: 2024/01/03 17:21:26 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+#include "../libft.h"
+
+int	ft_put_triarr(char ***tri)
 {
-	if ((!s1 && s2) || (s1 && !s2))
-		return (0);
-	if (!s1 && !s2)
-		return (1);
-	while (*s1 && *s2)
-	{
-		if (*(s1++) != *(s2++))
-			return (0);
-	}
-	if (*(s1++) != *(s2++))
-		return (0);
-	return (1);
+	int	i;
+	int	print_len;
+
+	i = 0;
+	print_len = 0;
+	if (!tri)
+		return (ft_printf("(tri_arr null)\n"));
+	while (tri[i])
+		print_len += ft_putmatrix(tri[i++]);
+	return (print_len);
 }

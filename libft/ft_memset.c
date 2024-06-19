@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 10:55:16 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/30 13:39:23 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/22 18:20:03 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, int len)
 
 	b2 = b;
 	i = -1;
-	while (++i < len)
+	while (b && ++i < len)
 		b2[i] = c;
 	return (b);
 }

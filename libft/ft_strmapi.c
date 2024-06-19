@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 12:58:12 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/30 13:42:25 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/22 18:25:17 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = -1;
 	mander = ft_calloc(ft_strlen(s) + 1, 1);
-	if (!mander)
-		return (NULL);
-	while (s[++i])
+	while (mander && s[++i])
 		mander[i] = f(i, s[i]);
 	return (mander);
 }

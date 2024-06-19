@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_chrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/23 15:53:49 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/22 18:19:34 by prando-a         ###   ########.fr       */
+/*   Created: 2023/12/23 20:25:51 by prando-a          #+#    #+#             */
+/*   Updated: 2024/01/03 17:13:00 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
-{
-	unsigned char		*p1;
-	unsigned char		*p2;
+#include "../libft.h"
 
-	p1 = (unsigned char *)s1;
-	p2 = (unsigned char *)s2;
-	while (n--)
+char	*ft_chrdel(char *str, char c, int del)
+{
+	int		i;
+	int		len;
+	char	*mander;	
+
+	i = -1;
+	len = 0;
+	if (!str)
+		return (NULL);
+	while (str[++i])
 	{
-		if (*p1 != *p2)
-			return (*p1 - *p2);
-		p1++;
-		p2++;
+		if (str[i] != c)
+			len++;
 	}
-	return (0);
+	mander = ft_calloc(len + 1, 1);
+	i = -1;
+	len = 0;
+	while (mander && str[++i])
+	{
+		if (str[i] != c)
+			mander[len++] = str[i];
+	}
+	if (del)
+		free(str);
+	return (mander);
 }

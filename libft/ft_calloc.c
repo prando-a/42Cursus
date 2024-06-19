@@ -6,7 +6,7 @@
 /*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 13:21:44 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/18 20:52:31 by crom             ###   ########.fr       */
+/*   Updated: 2023/12/20 12:18:04 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
-	size_t	s;
+	unsigned char	*ptr;
+	size_t			i;
 
-	s = count * size;
-	ptr = malloc(s);
-	if (ptr == NULL)
-		return (0);
-	ft_bzero (ptr, s);
+	ptr = malloc(count * size);
+	i = 0;
+	while (ptr && i < (count * size))
+		ptr[i++] = 0;
 	return (ptr);
 }

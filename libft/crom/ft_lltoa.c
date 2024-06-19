@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lltoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/28 17:03:12 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/20 15:54:45 by prando-a         ###   ########.fr       */
+/*   Created: 2024/04/30 22:19:38 by prando-a          #+#    #+#             */
+/*   Updated: 2024/04/30 22:20:01 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int	cifras(long n, int i)
+{
+	if (n <= 0)
+		i++;
+	while (n != 0 && ++i)
+		n /= 10;
+	return (i);
+}
+
+char	*ft_itoa(ssize_t n)
 {
 	char			*mander;
-	unsigned int	i;
+	int				i;
+	long long		l;
 
-	if (!s1)
-		return (NULL);
-	i = -1;
-	mander = (char *)ft_calloc((ft_strlen(s1) + 1), sizeof(char));
-	while (mander && s1[++i])
-		mander[i] = s1[i];
+	l = n;
+	i = cifras(l, 0);
+	mander = ft_calloc(i + 1, 1);
+	if (mander && l == 0)
+		mander[0] = '0';
+	if (mander && l < 0)
+	{
+		l = l * -1;
+		mander[0] = '-';
+	}
+	while (mander && l != 0)
+	{
+		mander[--i] = (l % 10) + '0';
+		l /= 10;
+	}
 	return (mander);
 }

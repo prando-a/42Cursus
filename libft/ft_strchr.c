@@ -3,24 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 14:56:44 by prando-a          #+#    #+#             */
-/*   Updated: 2023/08/21 16:19:30 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/20 12:27:35 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!s)
-		return (0);
-	while (*s)
+	while (s && *s)
 	{
 		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == (char)c)
+	if (s && *s == (char)c)
 		return ((char *)s);
 	return (0);
 }

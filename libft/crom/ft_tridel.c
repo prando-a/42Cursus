@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_tridel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/24 02:05:31 by crom             ###   ########.fr       */
+/*   Created: 2024/01/03 17:11:25 by prando-a          #+#    #+#             */
+/*   Updated: 2024/01/03 18:21:18 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+#include "../libft.h"
+
+void	ft_tridel(char ***tri)
 {
-	if ((!s1 && s2) || (s1 && !s2))
-		return (0);
-	if (!s1 && !s2)
-		return (1);
-	while (*s1 && *s2)
+	int	i;
+
+	i = 0;
+	if (tri)
 	{
-		if (*(s1++) != *(s2++))
-			return (0);
+		while (tri[i])
+			ft_strdel(tri[i++]);
+		free(tri);
+		tri = NULL;
 	}
-	if (*(s1++) != *(s2++))
-		return (0);
-	return (1);
 }

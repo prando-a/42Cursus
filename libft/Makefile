@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/17 00:35:21 by prando-a          #+#    #+#              #
-#    Updated: 2023/11/24 10:37:57 by prando-a         ###   ########.fr        #
+#    Updated: 2024/03/21 04:34:12 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,11 @@ EXTRA = ft_printf/ft_printf.c ft_printf/print_cs.c \
 CROM =	crom/ft_fndchr.c crom/ft_linecounter.c \
 		crom/ft_str_islf.c crom/ft_realloc.c \
 		crom/ft_arrnum.c crom/ft_arrlen.c crom/ft_arrdup.c \
-		crom/ft_merge.c crom/ft_arr_islf.c crom/ft_atoll.c crom/ft_arrjoin.c
+		crom/ft_merge.c crom/ft_arr_islf.c crom/ft_atoll.c crom/ft_arrjoin.c \
+		crom/ft_putmatrix.c crom/ft_chrdel.c crom/ft_chrcnt.c \
+		crom/ft_tridel.c crom/ft_put_triarr.c crom/ft_isalpha_sp.c\
+		crom/ft_file_to_str.c crom/ft_file_to_arr.c \
+		crom/ft_putfd.c crom/ft_putfd_fd.c crom/ft_free.c
 OLD =	old/ft_memdel.c old/ft_strdel.c old/ft_strclr.c \
 		old/ft_striter.c old/ft_strmap.c \
 		old/ft_strequ.c old/ft_strnequ.c
@@ -55,7 +59,7 @@ BONUS_O = $(BONUS:.c=.o)
 EXTRA_O	= $(EXTRA:.c=.o)
 OLD_O	= $(OLD:.c=.o)
 CROM_O  = $(CROM:.c=.o)
-FLAGS = -Wall -Wextra -Werror -c -o
+FLAGS = -Wall -Wextra -Werror -g -c -o
 A_LIB = @ar rcs
 
 all: $(NAME)

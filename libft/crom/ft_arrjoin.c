@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:45:28 by prando-a          #+#    #+#             */
-/*   Updated: 2023/11/23 20:22:48 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/20 16:12:38 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	arrjoin_free(char **a1, char **a2, int mode)
 {
-	if (mode > 0)
+	if (mode == 1 || mode == 3)
 		ft_strdel(a1);
-	if (mode == 2)
+	if (mode == 2 || mode == 3)
 		ft_strdel(a2);
 }
 
@@ -26,18 +26,18 @@ char	**ft_arrjoin(char **a1, char **a2, int mode)
 	int		i;
 	int		j;
 
+	if (!a1 || !a2)
+		return (ft_strdel(a1), ft_strdel(a2), NULL);
 	mander = ft_calloc(ft_arrnum(a1) + ft_arrnum(a2) + 1, sizeof(char *));
-	if (!mander)
-		return (NULL);
 	i = 0;
 	j = 0;
-	while (a1[i])
+	while (mander && a1[i])
 	{
 		mander[i] = ft_strdup(a1[i]);
 		if (!mander[i++])
 			return (ft_strdel(mander), NULL);
 	}
-	while (a2[j])
+	while (mander && a2[j])
 	{
 		mander[i] = ft_strdup(a2[j++]);
 		if (!mander[i++])

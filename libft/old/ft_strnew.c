@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:35:06 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/11 18:36:38 by prando-a         ###   ########.fr       */
+/*   Updated: 2024/06/13 16:02:00 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*str;
-
-	str = ft_calloc(size + 1, 1);
-	if (!str)
-		return (0);
-	return (str);
+	return (ft_calloc(size + 1, 1));
 }

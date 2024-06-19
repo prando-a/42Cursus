@@ -6,7 +6,7 @@
 /*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 17:09:11 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/16 17:54:59 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/22 18:26:42 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s) + 1;
 	while (--i)
 	{

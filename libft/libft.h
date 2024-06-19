@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:19:02 by prando-a          #+#    #+#             */
-/*   Updated: 2023/09/19 00:40:31 by crom             ###   ########.fr       */
+/*   Updated: 2024/04/03 16:24:25 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,67 @@
 // 	void			*content;
 // 	struct s_list	*next;
 // }	t_list;
+
+// Nomenclatures based on HTML entities.
+// See https://docs.moodle.org/403/en/HTML_entities for more info
+enum
+{
+	SPCHAR_FORMAT = -61,
+	n_TILDE = -79,
+	N_TILDE = -111,
+	a_ACUTE = -65,
+	A_ACUTE = -127,
+	a_GRAVE = -96,
+	A_GRAVE = -128,
+	e_ACUTE = -87,
+	E_ACUTE = -119,
+	e_GRAVE = -88,
+	E_GRAVE = -120,
+	i_ACUTE = -83,
+	I_ACUTE = -115,
+	i_GRAVE = -84,
+	I_GRAVE = -116,
+	o_ACUTE = -77,
+	O_ACUTE = -109,
+	o_GRAVE = -78,
+	O_GRAVE = -110,
+	u_ACUTE = -70,
+	U_ACUTE = -102,
+	u_GRAVE = -71,
+	U_GRAVE = -103,
+	u_UML = -68	
+}	;
+
+# define RED     	"\x1b[31m"
+# define BRED    	"\x1b[91m"
+# define GREEN   	"\x1b[32m"
+# define YELLOW  	"\x1b[33m"
+# define BLUE    	"\x1b[34m"
+# define MAGENTA	"\x1b[35m"
+# define CYAN    	"\x1b[36m"
+# define WHITE		"\033[37m"
+# define BLACK		"\x1b[30m"
+# define BOLD		"\033[1m"
+# define UNDLINE	"\x1b[4m"
+# define BLINK		"\x1b[5m"
+# define RESET   	"\x1b[0m"
+# define CLEAR		"\033[2J"
+# define BGWHITE	"\033[47m"
+# define BGRED		"\033[41m"
+# define BGGREEN	"\033[42m"
+# define BGYELLOW	"\033[43m"
+# define BGBLUE		"\033[44m"
+# define BGMAGENTA	"\033[45m"
+# define BGCYAN		"\033[46m"
+# define BGWHITE	"\033[47m"
+# define BGRESET	"\033[49m"
+
+typedef struct s_indexes
+{
+	int		i;
+	int		j;
+	int		k;
+}			t_indexes;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -73,8 +134,9 @@ void	ft_putnbr_fd(int n, int fd);
 // void	ft_lstclear(t_list **lst, void (*del)(void *));
 // void	ft_lstiter(t_list *lst, void (*f)(void *));
 // t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-char	*get_next_line(int fd); //Bonus version
-char	*gnl_strjoin(char *s1, char *s2, int mode); //a.k.a. ft_strjoin v2.0
+char	*get_next_line(int fd);
+char	*get_next_line_bonus(int fd);
+char	*gnl_strjoin(char *s1, char *s2, int mode, int init); //ft_strjoin v3.0
 void	ft_memdel(void **ap); //Use ft_strdel for string arrays
 char	*ft_strnew(size_t size); //For archive purpose. Use ft_calloc()
 void	ft_strdel(char **as);
@@ -83,8 +145,11 @@ void	ft_striter(char *s, void (*f)(char*));
 char	*ft_strmap(char const *s, char (*f)(char));
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+void	ft_msg(char *str); // ft_putendl_fd but fd is always 1
+void	ft_err_msg(char	*str); // ft_putendl_fd but fd is always 2
 int		ft_fndchr(char *str, char c);
 int		ft_linecounter(char *str);
+int		ft_chrcnt(char *str, char c);
 int		ft_str_islf(char *str);
 void	*ft_realloc(void *ptr, size_t new_size);
 int		ft_arrnum(char **array);
@@ -94,4 +159,16 @@ char	*ft_merge(char **array, char c, int len);
 ssize_t	ft_atoll(const char *str);
 char	**ft_arrjoin(char **a1, char **a2, int mode);
 char	**ft_arrdup(char **array);
+int		ft_putmatrix(char **arr);
+char	*ft_file_to_str(int fd);
+char	**ft_file_to_arr(int fd);
+int		ft_putfd(int fd);
+void	ft_putfd_fd(int fd_src, int fd_dst);
+char	*ft_ftoa(float n);
+char	*ft_chrdel(char *str, char c, int del);
+void	ft_tridel(char ***tri);
+int		ft_put_triarr(char ***tri);
+int		ft_isalpha_spa(int c);
+void	ft_free(void *ptr);
+
 #endif

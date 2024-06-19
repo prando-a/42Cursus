@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 15:21:09 by prando-a          #+#    #+#             */
-/*   Updated: 2023/07/16 12:00:03 by prando-a         ###   ########.fr       */
+/*   Updated: 2023/12/20 12:33:12 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 
 	p = s;
 	i = -1;
-	while (++i < n)
+	while (s && p && ++i < n)
 	{
 		if (p[i] == (char)c)
 			return ((char *)&p[i]);

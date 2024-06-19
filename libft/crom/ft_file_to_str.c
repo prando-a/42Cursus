@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_file_to_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/24 02:05:31 by crom             ###   ########.fr       */
+/*   Created: 2023/12/20 15:33:05 by prando-a          #+#    #+#             */
+/*   Updated: 2023/12/31 02:16:02 by crom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+#include "../libft.h"
+
+char	*ft_file_to_str(int fd)
 {
-	if ((!s1 && s2) || (s1 && !s2))
-		return (0);
-	if (!s1 && !s2)
-		return (1);
-	while (*s1 && *s2)
+	char	*raw;
+	char	*line;
+
+	raw = NULL;
+	line = get_next_line(fd);
+	while (line)
 	{
-		if (*(s1++) != *(s2++))
-			return (0);
+		raw = gnl_strjoin(raw, line, 3, 1);
+		if (!raw)
+			return (NULL);
+		line = get_next_line(fd);
 	}
-	if (*(s1++) != *(s2++))
-		return (0);
-	return (1);
+	return (raw);
 }

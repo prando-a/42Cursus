@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_chrcnt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crom <crom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:53:04 by prando-a          #+#    #+#             */
-/*   Updated: 2023/12/24 02:05:31 by crom             ###   ########.fr       */
+/*   Created: 2024/01/03 17:22:52 by prando-a          #+#    #+#             */
+/*   Updated: 2024/01/03 17:26:16 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+int	ft_chrcnt(char *str, char c)
 {
-	if ((!s1 && s2) || (s1 && !s2))
-		return (0);
-	if (!s1 && !s2)
+	int	i;
+	int	fnd;
+
+	i = -1;
+	fnd = 0;
+	if (str && !str[0])
 		return (1);
-	while (*s1 && *s2)
+	while (str && str[++i])
 	{
-		if (*(s1++) != *(s2++))
-			return (0);
+		if (str[i] == c)
+			fnd++;
 	}
-	if (*(s1++) != *(s2++))
-		return (0);
-	return (1);
+	return (fnd);
 }
