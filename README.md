@@ -13,7 +13,7 @@ Simple printf implementation done in the easy way, composed of a lot of writes. 
 Reads a file descriptor and returns a line (read until a newline char or EOF is found), used to read files or the standard input. Easy to understand, memory safe, just a delight to read.
 
 ### [push_swap](https://github.com/prando-a/42Cursus/tree/master/push_swap)
-Allegedly efficient integer sorting program using two stacks (linked lists) with limited elements movements to make development hard. [Radix](https://en.wikipedia.org/wiki/Radix_sort was used as the main sorting algorithm.
+Allegedly efficient integer sorting program using two stacks (linked lists) with limited elements movements to make development hard. [Radix](https://en.wikipedia.org/wiki/Radix_sort) was used as the main sorting algorithm.
 Frankly very easy to read and very light source code.
 
 ### [so_long](https://github.com/prando-a/42Cursus/tree/master/so_long)
@@ -31,7 +31,7 @@ A simple implementation of the (in)famous [dining philosophers problem](https://
 
 ### [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)
 The latest C project, duo-baked (Yes, again with the master [@pepe587](https://github.com/pepe587)).
-Second and likely last experience with the MLX42 library but now about doing a first-person maze engine using [ray casting](https://en.wikipedia.org/wiki/Ray_casting). My comrade used his own algorithm and made the entire animation and wall-collision systems. Maybe the most epic project we had the honor to complete. cub3D can read any valid map which must also contain paths to any desired texture and floor and ceiling colors.
+Second and likely last experience with the MLX42 library but now about doing a first-person maze engine using [ray casting](https://en.wikipedia.org/wiki/Ray_casting). My comrade used his own algorithm and made the entire animation and wall-collision systems. Maybe the most epic project we had the honor to complete. cub3D can parse any valid map which must also contain paths to any desired texture and floor and ceiling colors.
 
 ### [cpp-modules](https://github.com/prando-a/42Cursus/tree/master/cpp_modules)
 First C++ assignments, a series of short exercises regarding every basic of this language. 10 mini-projects, arranged on two batches (00 to 04 and 05 to 09). Concepts introduced are
