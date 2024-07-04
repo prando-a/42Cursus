@@ -1,0 +1,49 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: prando-a <prando-a@student.42.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/10 20:53:26 by prando-a          #+#    #+#             */
+/*   Updated: 2024/06/10 20:53:26 by prando-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.hpp"
+
+Cat::Cat() : Animal()
+{
+	std::cout << GREEN << "\t \t \t and turns out to be a cat \n" << RESET;
+	this->_type = "Cat";
+	this->_brain = new Brain();
+}
+
+Cat::Cat(const Cat &Cat) : Animal(Cat)
+{
+	std::cout << GREEN << "Cat copy constructor called \n" << RESET;
+	this->_brain = new Brain(*Cat._brain);
+}
+
+Cat &Cat::operator=(const Cat &Cat)
+{
+    std::cout << GREEN "Cat copy assignment operator called \n" << RESET;
+	if (this != &Cat)
+	{
+		delete this->_brain;
+		this->_brain = new Brain(*Cat._brain);
+    	this->_type = Cat._type;
+	}
+    return *this;
+}
+
+Cat::~Cat()
+{
+	std::cout << GREEN << "A cat died, and thus..." << RESET << std::endl;
+	delete this->_brain;
+}
+
+void Cat::makeSound() const
+{
+	std::cout << GREEN << "~meoooww" << RESET << std::endl;
+}

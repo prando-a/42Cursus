@@ -35,5 +35,5 @@ Second and likely last experience with the MLX42 library but now about doing a f
 
 ### [cpp-modules](https://github.com/prando-a/42Cursus/tree/master/cpp_modules)
 First C++ assignments, a series of short exercises regarding every basic of this language. 10 mini-projects, arranged on two batches (00 to 04 and 05 to 09). Concepts introduced are
-OOP, classes, polymorphism, inheritance, operators overload, data abstraction, exceptions, advanced castings, templates... basically everything mandatory for a C learner to understand and deal with its mentioned successor.
+OOP, classes, polymorphism, inheritance, operators overload, data abstraction, exceptions, advanced castings, templates, vectors, algorithms... basically everything mandatory for a C learner to understand and deal with its mentioned successor.
 <br> (CURRENTLY WORK IN PROGRESS)
