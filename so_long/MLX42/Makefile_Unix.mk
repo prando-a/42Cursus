@@ -29,7 +29,7 @@ $(NAME): $(OBJS)
 
 %.o: %.c $(HDRS)
 	@echo "$(GREEN)$(BOLD)Compiling:$(RESET) $(notdir $<)"
-	@$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS)
+	@gcc $(CFLAGS) -o $@ -c $< $(HEADERS)
 
 # Convert shaders to .c files
 $(SRC_DIR)/mlx_%_shader.c: $(SHADER_DIR)/default.%

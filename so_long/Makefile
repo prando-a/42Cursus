@@ -25,7 +25,8 @@ all: $(NAME)
 bonus: $(BONUS_O) $(LIBFT_PATH)/libft.a $(LIBMLX)/libmlx42.a
 	gcc -o $(NAME) $^ -L$(LIBFT_PATH) -ldl -lglfw -I include -lglfw -L "/Users/$(USER)/.brew/opt/glfw/lib/" -pthread -lm
 	@echo
-	@echo 100% - BONUS
+	@echo 125% - BONUS
+	@echo
 
 $(NAME): $(SRC_O) $(LIBFT_PATH)/libft.a $(LIBMLX)/libmlx42.a
 	gcc -o $@ $^ -L$(LIBFT_PATH) -ldl -lglfw -I include -lglfw -L "/Users/$(USER)/.brew/opt/glfw/lib/" -pthread -lm

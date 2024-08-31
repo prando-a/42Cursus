@@ -1,7 +1,16 @@
 # ft_printf &nbsp; :sparkles: :sparkles: HACENDADO EDITION :sparkles: :sparkles:
-Bufferless, cut and not ready for error checking (because of its design), but HEY! It works, at least for what we need at 42 School.
+
+### Description
+
+Extremely simple printf implementation. Faster and more efficient, but bufferless, cut and not ready for error checking (because of its design). Works enough for what is needed at 42School.
 
 * It can only print the following formats: <br>
-&nbsp;&nbsp;&nbsp;&nbsp; `%d` | `%i` | `%u` | `%x` | `%X` | `%p` | `%c` | `%s` | `%%`
 
-Someday I will improve it, but only when needed.
+&nbsp;&nbsp;&nbsp;&nbsp;  `%d` | `%i` | `%u` | `%x` | `%X` | `%p` | `%c` | `%s` | `%%`
+
+### Usage
+
+This release uses its own Makefile which will compile function as an `.a` library.
+This file can be included to compile any program. Nothing else is needed. <br>
+
+ft_printf is already included on [libft](https://github.com/prando-a/42Cursus/tree/master/libft).

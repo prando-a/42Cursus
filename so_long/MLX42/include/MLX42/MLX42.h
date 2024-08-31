@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MLX42.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jose-mgo <jose-mgo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 00:33:01 by W2Wizard          #+#    #+#             */
-/*   Updated: 2023/11/21 16:20:52 by prando-a         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:47:52 by jose-mgo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,8 +117,8 @@ typedef struct mlx_key_data
  */
 typedef struct mlx_image
 {
-	const uint32_t	width;
-	const uint32_t	height;
+	const uint32_t		width;
+	const uint32_t		height;
 	uint8_t*		pixels;
 	mlx_instance_t*	instances;
 	int32_t			count;
