@@ -19,7 +19,7 @@ std::string trim(std::string str)
 	return str.substr(first, (last - first + 1));
 }
 
-int get_unix_time(std::string date)
+int get_unix_time(std::string date, int input_flag)
 {
     struct tm tm;
 	memset(&tm, 0, sizeof(struct tm));
@@ -38,6 +38,12 @@ int get_unix_time(std::string date)
 		return (-1);
     }
 
+	if (input_flag && (year < 109 || (year == 109 && month == 0 && day == 1)))
+	{
+		std::cerr << RED << "Error: Too low date: => " << date << RESET << "\n";
+		return (-1);
+	}
+
 	if (year != tm.tm_year || month != tm.tm_mon || day != tm.tm_mday)
 	{
 		std::cerr << RED << "Error: Bad input: => " << date << RESET << "\n";
@@ -50,7 +56,7 @@ int get_unix_time(std::string date)
 void BitcoinExchange::printInfo(long long quantity, std::string date)
 {
 
-	long long u_date = get_unix_time(date);
+	long long u_date = get_unix_time(date, 1);
 	if (u_date == -1) return;
 
 	if (quantity < 0)
@@ -67,7 +73,7 @@ void BitcoinExchange::printInfo(long long quantity, std::string date)
 	std::map<std::string, double>::iterator it = this->map.begin();
 	while (it != this->map.end())
 	{
-		long long u_key = get_unix_time(it->first);
+		long long u_key = get_unix_time(it->first, 0);
 		if (u_key == u_date)
 			break;
 		if (u_key > u_date)
@@ -78,6 +84,7 @@ void BitcoinExchange::printInfo(long long quantity, std::string date)
 		it++;
 	}
 
+	if (it == this->map.end()) it--;
 	std::cout << date << " => " << quantity << " = ";
 	std::cout << quantity * map[it->first] << "\n";
 }
