@@ -52,6 +52,8 @@ void RPN::make_operation(std::stack<int> &stack, int operator_)
 			stack.top() *= temp;
 			break;
 		case '/':
+			if (temp == 0)
+				this->error("DIVISION BY ZERO");
 			stack.top() /= temp;
 			break;
 	}
