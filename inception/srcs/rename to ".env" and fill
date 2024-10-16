@@ -1,0 +1,13 @@
+DOMAIN_NAME=username.42.fr
+DB_NAME=mariadb
+DB_USER=username
+DB_PASS=your_pass
+DB_ROOT_PASS=your_pass
+WP_DB_HOST=mariadb:3306
+WP_TITLE=Inception
+WP_USER=your_wp_usr
+WP_PASS=your_pass
+WP_ADMIN=username
+WP_ADMIN_PASS=your_pass
+WP_ADMIN_MAIL=adminname@student.domain.com
+WP_USER_MAIL=username@domain.com
