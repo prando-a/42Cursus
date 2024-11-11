@@ -4,7 +4,7 @@ Every project done so far at 42School in Málaga. This made the mastering of cod
 ## Summary
 
 ### [libft + extra functions](https://github.com/prando-a/42Cursus/tree/master/libft)
-My first library, our C Swiss knife. Some functions are a mess to read, but I will try to improve them later. Every mandatory + bonus functions are included, memory safe and passed with strict tests of [paco](https://github.com/xicodomingues/francinette). ft_printf and get_next_line are included along some functions from the deprecated previous libft version and some more useful extra memory and parsing functions used for further C projects.
+My first library, our C Swiss knife. Every mandatory + bonus functions are included, memory safe and passed with strict tests of [paco](https://github.com/xicodomingues/francinette). ft_printf and get_next_line are included along some functions from the deprecated previous libft version and some more useful extra memory and parsing functions used for further C projects.
 
 ### [ft_printf](https://github.com/prando-a/42Cursus/tree/master/ft_printf)
 Simple printf implementation done in the easy way, composed of a lot of writes. Funny to do, very easy to understand, useful enough for further C projects.
@@ -39,3 +39,6 @@ OOP, classes, polymorphism, inheritance, operators overload, data abstraction, e
 
 ### [inception](https://github.com/prando-a/42Cursus/tree/master/inception)
 This project regards the use of docker-compose to create and link three containers to generate a server environment. One container must have a database service installed (mariaDB), another one for Wordpress and finally one more for a webserver (Nginx). Each container must be created with an image made from scratch manually installing requirements with Dockerfiles and scripts.
+
+### [ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc)
+The only major C++ project in common-core, this time about building a IRC Chat server setting its own socket, bind the connection and listen through a given port on arguments. The server has to handle multiple client sockets connection with [poll()](https://pubs.opengroup.org/onlinepubs/009696799/functions/poll.html) or [select()](https://man7.org/linux/man-pages/man2/select.2.html) and then give an IRC chat service including channels with a bunch of modes activated, permission and access managing among users, follow the protocol for regular IRC clients (used [Hexchat](https://hexchat.github.io/) as reference) and allowing connection via netcat. [@pepe587](https://github.com/pepe587)) contributed to the project building most server commands.

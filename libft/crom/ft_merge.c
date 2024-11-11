@@ -38,6 +38,8 @@ char	*ft_merge(char **array, char c, int len)
 	char	*mander;
 	int		s_len;
 
+	if (!array || !*array)
+		return (NULL);
 	s_len = 0;
 	while (array[s_len])
 	{
