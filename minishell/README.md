@@ -98,10 +98,10 @@ The prompt will also display the user name. And the $ symbol at the end will cha
 ### Additional Features
 
 * Some environment variables managements
-- SHELL is set up as `minishell`
-- SHLVL raises its count every instance of minishell executed
-- If PATH is missing, it can be set up again by using the `export` built-in
-- In prompt, if the USER variable to display is missing, LOGNAME will be used or `minishell` if neither available.
+  - SHELL is set up as `minishell`
+  - SHLVL raises its count every instance of minishell executed
+  - If PATH is missing, it can be set up again by using the `export` built-in
+  - In prompt, if the USER variable to display is missing, LOGNAME will be used or `minishell` if neither available.
 * Heredoc is fully parsed and tokenized.
 * If multiple input/output files are stated on a command, the very last one will be used.
 
