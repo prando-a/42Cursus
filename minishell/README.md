@@ -1,0 +1,104 @@
+
+# minishell
+
+### Description
+
+The objective of this project is to create a simple shell, mimicking some of the behaviors and functionalities of a real shell like `bash`. Through this project, you will learn:
+- **Process management**: Using `fork()` and `execve()` to execute commands.
+- **Signal handling**: Implementing basic signals (`SIGINT`, `SIGQUIT`) for interactive shell behavior.
+- **Parsing**: Tokenizing and interpreting user input to execute commands.
+- **Redirection and Pipes**: Handling input/output redirection and piping between commands.
+
+The goal is to gain a deeper understanding of how shells function and interact with the operating system.
+
+### Prerequisites
+
+Before running the project, ensure that the `readline` library is installed on your system. Use the following commands to install it:
+
+- On Debian-based systems (e.g., Ubuntu):
+  ```bash
+  sudo apt-get install libreadline-dev
+  ```
+
+- On Red Hat-based systems (e.g., Fedora):
+  ```bash
+  sudo dnf install readline-devel
+  ```
+
+- On macOS (with Homebrew):
+  ```bash
+  brew install readline
+  ```
+
+### Usage
+
+This program is compiled with a Makefile located in the minishell directory. Type `make` or `make all` to compile the project. <br>
+
+Once compiled, a `minishell` executable will be generated. Execution is as follows:
+
+```bash
+./minishell
+```
+
+Minishell will display a prompt waiting for user input. Type commands as you would in a regular shell.
+Prompt will display the user name. And the $ symbol at the end will change color based on the exit status of the last command executed:
+
+  -  The $ will appear in green if the exit status is 0 (indicating success).
+  -  The $ will appear in red if the exit status is non-zero (indicating an error).
+
+### Examples of Execution
+
+1. **Running a basic command**:
+   ```bash
+   ls -la
+   ```
+   Executes the `ls` command with the `-la` flags.
+
+2. **Using pipes**:
+   ```bash
+   ls -1 | grep "file"
+   ```
+   Lists files in the current directory and filters those containing the word "file".
+
+3. **Redirection**:
+   - **Output redirection**:
+     ```bash
+     echo "Hello, World!" > file.txt
+     ```
+     Writes the output of `echo` to `file.txt`.
+   - **Input redirection**:
+     ```bash
+     cat < file.txt
+     ```
+     Reads the content of `file.txt` and displays it.
+   - **Append redirection**:
+     ```bash
+     echo "Additional line" >> file.txt
+     ```
+     Appends a new line to `file.txt`.
+
+4. **Environment variables**:
+   ```bash
+   echo $HOME
+   ```
+   Displays the value of the `HOME` environment variable.
+
+5. **Built-in commands**:
+   - Change directory:
+     ```bash
+     cd /path/to/directory
+     ```
+   - Display current directory:
+     ```bash
+     pwd
+     ```
+
+### Additional Features
+
+- 
+
+### Notes
+
+- Ensure all commands used are available in the system's `$PATH`.
+- Properly handle edge cases like invalid input, non-existent files, or incorrect command usage.
+- The shell should exit gracefully when the `exit` command is issued or a termination signal is received.
