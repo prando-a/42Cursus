@@ -1,5 +1,5 @@
 NAME = span
-SRC =	main.cpp
+SRC =	main.cpp Span.cpp
 FLAGS =  -g -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)

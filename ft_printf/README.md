@@ -3,10 +3,11 @@
 ### Description
 
 Extremely simple printf implementation. Faster and more efficient, but bufferless, cut and not ready for error checking (because of its design). Works enough for what is needed at 42School.
+This project mainly teaches the use of variadic functions.
 
 * It can only print the following formats: <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;  `%d` | `%i` | `%u` | `%x` | `%X` | `%p` | `%c` | `%s` | `%%`
+`%d` | `%i` | `%u` | `%x` | `%X` | `%p` | `%c` | `%s` | `%%`
 
 ### Usage
 

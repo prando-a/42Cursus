@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: prando-a <prando-a@student.42malaga.com>   #+#  +:+       +#+        */
+/*   By: prando-a <prando-a@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-07-02 15:14:59 by prando-a          #+#    #+#             */
-/*   Updated: 2024-07-02 15:14:59 by prando-a         ###   ########.com      */
+/*   Created: 2024/07/02 15:14:59 by prando-a          #+#    #+#             */
+/*   Updated: 2024/07/16 19:00:28 by prando-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 #include <algorithm>
 
 template <typename T>
-
 typename T::iterator easyfind(T &t, int n)
 {
 	typename T::iterator i = t.begin();

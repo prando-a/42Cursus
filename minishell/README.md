@@ -1,6 +1,8 @@
 
 # minishell
 
+![](.media/00.png)
+
 ### Description
 
 The objective of this project is to create a simple shell, mimicking some of the behaviors and functionalities of a real shell like `bash`. Through this project, you will learn:
@@ -40,8 +42,8 @@ Once compiled, a `minishell` executable will be generated. Execution is as follo
 ./minishell
 ```
 
-Minishell will display a prompt waiting for user input. Type commands as you would in a regular shell.
-Prompt will display the user name. And the $ symbol at the end will change color based on the exit status of the last command executed:
+Minishell will display a prompt waiting for user input.
+The prompt will also display the user name. And the $ symbol at the end will change color based on the exit status of the last command executed:
 
   -  The $ will appear in green if the exit status is 0 (indicating success).
   -  The $ will appear in red if the exit status is non-zero (indicating an error).
@@ -95,7 +97,13 @@ Prompt will display the user name. And the $ symbol at the end will change color
 
 ### Additional Features
 
-- 
+* Some environment variables managements
+- SHELL is set up as `minishell`
+- SHLVL raises its count every instance of minishell executed
+- If PATH is missing, it can be set up again by using the `export` built-in
+- In prompt, if the USER variable to display is missing, LOGNAME will be used or `minishell` if neither available.
+* Heredoc is fully parsed and tokenized.
+* If multiple input/output files are stated on a command, the very last one will be used.
 
 ### Notes
 

@@ -1,5 +1,6 @@
 # 42Cursus - common-core
 Every project done so far at 42School in Málaga. This made the mastering of coding out of a true life experience, of which I must be grateful.
+Every project includes a README.md fully documenting it (Work in progress as of 2024/12/27).
 
 ## Summary
 
@@ -26,7 +27,7 @@ Introduction to command execution and use of pipes in C. This program takes info
 First duo project (with [@pepe587](https://github.com/pepe587) as the master of parsing and signal management), and this one was a massive challenge. Implementation of a bash shell with essential features, such as a bunch of incorporated built-ins, use of system and custom environment variables, execution of undefined number of commands communicated by pipes, read from and write into files, input history and custom signal actions. Everything with a solid front-end and an exquisite memory and file descriptors management. 
 Uses [readline()](https://tiswww.case.edu/php/chet/readline/rltop.html) libraries.
 
-### [philosophers](https://github.com/prando-a/42Cursus/tree/master/philososphers)
+### [philosophers](https://github.com/prando-a/42Cursus/tree/master/philosophers)
 A simple implementation of the (in)famous [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) with use of threads as philos and mutexes as forks. A curious yet strange introduction to thread management with a philosophical perspective.
 
 ### [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)
@@ -41,7 +42,7 @@ OOP, classes, polymorphism, inheritance, operators overload, data abstraction, e
 This project regards the use of [docker-compose](https://docs.docker.com/compose/) to create and link three containers to generate a server environment. One container must have a database service installed (mariaDB), another one for Wordpress and finally one more for a webserver (Nginx). Each container must be created with an image made from scratch manually installing requirements with Dockerfiles and scripts.
 
 ### [ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc)
-The only major C++ project in common-core, this time about building a IRC Chat server setting its own socket, bind the connection and listen through a given port on arguments. The server has to handle multiple client sockets connection with [poll()](https://pubs.opengroup.org/onlinepubs/009696799/functions/poll.html) or [select()](https://man7.org/linux/man-pages/man2/select.2.html) and then give an IRC chat service including channels with a bunch of modes activated, permission and access managing among users, follow the protocol for regular IRC clients (used [Hexchat](https://hexchat.github.io/) as reference) and allowing connection via netcat. [@pepe587](https://github.com/pepe587)) contributed to the project building most server commands.
+The only major C++ project in common-core, this time about building a IRC Chat server setting its own socket, bind the connection and listen through a given port on arguments. The server has to handle multiple client sockets connection with [poll()](https://pubs.opengroup.org/onlinepubs/009696799/functions/poll.html) or [select()](https://man7.org/linux/man-pages/man2/select.2.html) and then give an IRC chat service including channels with a bunch of modes activated, permission and access managing among users, follow the protocol for regular IRC clients (used [Hexchat](https://hexchat.github.io/) as reference) and allowing connection via netcat). [@pepe587](https://github.com/pepe587) contributed to the project building most server commands.
 
 ### [ft_transcendence]() (Currently in development)
-Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend, frontend, users database and auth system modules using a docker-compose. There is certain freedom on choosing the language for every module, and a bunch of base-mandatory parts.
+Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend, frontend, users database and auth system modules using a docker-compose. There is certain freedom on choosing the language for every module, and a bunch of base-mandatory parts. More info and code will be available when it is complete. Our team is working hard on it.
