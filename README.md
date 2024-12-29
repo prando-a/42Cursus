@@ -1,6 +1,7 @@
 # 42Cursus - common-core
-Every project done so far at 42School in Málaga. This made the mastering of coding out of a true life experience, of which I must be grateful.
-Every project includes a README.md fully documenting it (Work in progress as of 2024/12/27).
+Every project done so far at 42School in Málaga. This made the mastering of coding out of a true life experience, of which I must be grateful. <br>
+Projects are mostly related to from basic to advanced C / C++ programming. Some projects have strong influence on bash language, environment and system-managing. Every project includes a README.md fully documenting it (Work in progress as of 2024/12/29). [Skills acquired are in this section](#skills-learnt)
+
 
 ## Summary
 
@@ -18,7 +19,7 @@ Allegedly efficient integer sorting program using two stacks (linked lists) with
 Frankly very easy to read and very light source code.
 
 ### [so_long](https://github.com/prando-a/42Cursus/tree/master/so_long)
-First contact with the MLX42 library (stylized GLFW and OpenGL weird mix) to make a 2D game about collecting a certain amount of elements and then unlocking the exit where game finishes. By passing some general parsing rules, any map can be proccessed.
+First contact with the [**MLX42**](https://github.com/codam-coding-college/MLX42) library (stylized GLFW and OpenGL weird mix) to make a 2D game about collecting a certain amount of elements and then unlocking the exit where game finishes. By passing some general parsing rules, any map can be proccessed.
 
 ### [pipex](https://github.com/prando-a/42Cursus/tree/master/pipex)
 Introduction to command execution and use of pipes in C. This program takes info from an input file, and executes commands automatically finding their correct path, each of them communicated by a pipe, until the last command which final output will be flushed into an output file.
@@ -32,7 +33,7 @@ A simple implementation of the (in)famous [dining philosophers problem](https://
 
 ### [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)
 The latest C project, duo-baked (Yes, again with the master [@pepe587](https://github.com/pepe587)).
-Second and likely last experience with the MLX42 library but now about doing a first-person maze engine using [ray casting](https://en.wikipedia.org/wiki/Ray_casting). My comrade used his own algorithm and made the entire animation and wall-collision systems. Maybe the most epic project we had the honor to complete. cub3D can parse any valid map which must also contain paths to any desired texture and floor and ceiling colors.
+Second and likely last experience with the [**MLX42**](https://github.com/codam-coding-college/MLX42) library but now about doing a first-person maze engine using [ray casting](https://en.wikipedia.org/wiki/Ray_casting). My comrade used his own algorithm and made the entire animation and wall-collision systems. Maybe the most epic project we had the honor to complete. cub3D can parse any valid map which must also contain paths to any desired texture and floor and ceiling colors.
 
 ### [cpp-modules](https://github.com/prando-a/42Cursus/tree/master/cpp_modules)
 First C++ assignments, a series of short exercises regarding every basic of this language. 10 mini-projects, arranged on two batches (00 to 04 and 05 to 09). Concepts introduced are
@@ -46,3 +47,47 @@ The only major C++ project in common-core, this time about building a IRC Chat s
 
 ### [ft_transcendence]() (Currently in development)
 Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend, frontend, users database and auth system modules using a docker-compose. There is certain freedom on choosing the language for every module, and a bunch of base-mandatory parts. More info and code will be available when it is complete. Our team is working hard on it.
+
+----------------------------------------------
+----------------------------------------------
+
+## Skills learnt
+
+The areas covered by the projects include:
+
+1. **Algorithms and Data Structures** ():  
+   - Learning to design and optimize efficient algorithms.  
+   - Handling and applying various data structures (lists, stacks, queues, trees, graphs, etc.).
+
+2. **C/C++ Programming**:  
+   - Mastery of low-level programming in C and high-level programming in C++.  
+   - Direct manipulation of memory, pointers, structures, and control flow.
+
+3. **Low-Level Software Development**:  
+   - Programming focused on direct interaction with the machine and the operating system.  
+   - In-depth knowledge of memory management, process handling, threads, and synchronization (mutexes, semaphores).
+
+4. **Operating Systems and Linux Administration** ([pipex](https://github.com/prando-a/42Cursus/tree/master/pipex), [minishell](https://github.com/prando-a/42Cursus/tree/master/minishell)):  
+   - Deepening knowledge of how operating systems work, especially in Linux environments.  
+   - Managing processes, memory, files, and devices.  
+   - Using terminal tools, scripting, user management, permissions, and networking.
+
+5. **Computer Networking** ([ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc), ):  
+   - Learning how computers communicate over networks.  
+   - Using protocols and tools such as sockets, TCP/IP, UDP, HTTP, etc.
+
+6. **Concurrent Programming** ([philosophers](https://github.com/prando-a/42Cursus/tree/master/philosophers), [so_long](https://github.com/prando-a/42Cursus/tree/master/so_long), [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)):  
+   - Creating multi-threaded and multi-tasking applications. 
+   - Implementing synchronization and managing shared resources.
+
+7. **Testing and Debugging** ([libft library](https://github.com/prando-a/42Cursus/tree/master/libft)):  
+   - Developing good practices for testing, debugging, and optimizing code.  
+   - Using tools such as gdb, Valgrind, and others.
+
+8. **Game Development** ([so_long](https://github.com/prando-a/42Cursus/tree/master/so_long), [cub3D](https://github.com/prando-a/42Cursus/tree/master/cub3D)):  
+   - In projects like **cub3d**, students can experience graphical programming, raycasting, game engines, and real-time user input handling.
+
+9. **Low-Level Hardware Interaction**:  
+   - In some projects, students work with hardware-level manipulation, such as controlling input/output devices.
+
+Each of these fields is developed through practical projects that simulate real-world situations, preparing students to face complex challenges in the professional world.

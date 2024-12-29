@@ -5,9 +5,12 @@
 
 ### Description
 
-The **so_long** project is a simple 2D game where a player must navigate through a map, collect all the collectible items, and reach the exit to win. This project is designed to teach essential skills in graphics programming, event handling, and game development using the **MinilibX** graphics library.
+The **so_long** project is a simple 2D game where a player must navigate through a map, collect all the collectible items, and reach the exit to win. This project is designed to teach essential skills in graphics programming, event handling, and game development using the [**MLX42**](https://github.com/codam-coding-college/MLX42) graphics library. The **MLX42** library, which is a modern implementation of the classic MinilibX, which requires **GLFW** to be installed on your system. On Linux, it can be installed with the following command:
+```bash
+sudo apt-get install libglfw3-dev
+```
 
-Through this project, you will learn:
+Through this project, skills acquired are:
 - **Graphics programming**: Drawing images, handling sprites, and creating animations.
 - **Event handling**: Responding to user input through keyboard events.
 - **Basic game mechanics**: Implementing collectibles, player movement, and win/lose conditions.
@@ -16,7 +19,7 @@ Through this project, you will learn:
 ### Features
 
 1. The game starts with a player sprite on a map defined in a `.ber` file.
-2. The player can move using keyboard inputs (e.g., `W`, `A`, `S`, `D` keys).
+2. The player can move using keyboard inputs (WASD or arrow keys).
 3. The objective is to collect all collectibles and reach the exit without breaking the rules of the map.
 4. The program tracks and displays the number of moves made by the player.
 5. Errors in the map format or invalid inputs are handled gracefully with appropriate messages.
@@ -24,26 +27,39 @@ Through this project, you will learn:
 ### Bonus Features
 
 In the bonus version of **so_long**, additional features are implemented:
-- **Enemy AI**: Enemies are added to the map, and the player loses if they collide with an enemy.
-- **Sprite Animation**: Player, collectibles, and enemies have animated sprites for smoother visuals.
-- **Multiple Map Support**: Ability to load and play different maps.
+- **Enemies**: Enemies are added to the map, and the player loses if they collide with an enemy.
+- **Sprite Animation**: Player and enemies are animated (too simply).
+- **Total moves count display on screen** instead of standard output.
 
 ### Map Requirements
 
-- The map must be rectangular and surrounded by walls (`1`).
+- The map must be rectangular and surrounded by walls (`1`), then also completely closed.
 - It must contain:
-  - At least one exit (`E`).
+  - Only one exit (`E`).
   - At least one collectible (`C`).
   - Exactly one starting position (`P`).
+- It must be possible to complete the level. The program is smart enough to know if all collectibles and exit are accessible and no walls are impeding it.
 - The map is parsed from a `.ber` file.
+- No empty lines are allowed in the file, including above, under, and within the map content.
+- The only characters allowed are:
+  - `0` for empty space.
+  - `1` for walls.
+  - `C` for collectibles.
+  - `E` for the exit.
+  - `P` for the player’s starting position.
+  - `M` (optional, in the bonus version) for enemies.
 
-Example of a valid map (`map.ber`):
+Example of a valid map (`map_bonus.ber`):
 ```
-111111
-1P0C01
-100001
-1C0E01
-111111
+1111111111111111111111
+11C1010000000000000001
+1101M1010M011111010101
+10001C01M000001101M101
+1011111110111011011C01
+100000000C1M1C1MC1C101
+1111111111111111110101
+1C00E000000000000000P1
+1111111111111111111111
 ```
 
 ### Usage
@@ -56,38 +72,10 @@ Once compiled, a `so_long` executable will be generated. Execution is as follows
 ./so_long [map.ber]
 ```
 
-### Examples of Execution
-
-1. **Basic Execution**:
-   ```bash
-   ./so_long maps/map.ber
-   ```
-   This starts the game with the specified map.
-
-2. **Bonus Execution**:
-   ```bash
-   ./so_long maps/bonus_map.ber
-   ```
-   Starts the game with bonus features enabled.
-
 ### Controls
 
-- **Move Up**: `W`
-- **Move Down**: `S`
-- **Move Left**: `A`
-- **Move Right**: `D`
+- **Move Up**: `W` or `UP`
+- **Move Down**: `S` or `DOWN`
+- **Move Left**: `A` or `LEFT`
+- **Move Right**: `D` or `RIGHT`
 - **Exit the Game**: `ESC`
-
-### Notes
-
-- Ensure that the map files are valid and comply with the specified requirements.
-- The program will display an error message and exit if the map is invalid or if there are any issues with the `.ber` file.
-- Bonus features provide enhanced gameplay and visuals but require additional resources and testing.
-
-### Dependencies
-
-- **MinilibX**: Ensure MinilibX is installed and properly linked during compilation.
-- **X11 Libraries**: Required for graphics handling on Linux. Install using:
-  ```bash
-  sudo apt-get install libx11-dev libxext-dev
-  ```

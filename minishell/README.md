@@ -85,15 +85,40 @@ The prompt will also display the user name. And the $ symbol at the end will cha
    ```
    Displays the value of the `HOME` environment variable.
 
-5. **Built-in commands**:
-   - Change directory:
+5. **Built-in commands (made from scratch with pure C)**:
+   - **Change directory**:
      ```bash
      cd /path/to/directory
      ```
-   - Display current directory:
+   - **Display current directory**:
      ```bash
      pwd
      ```
+   - **Print text to standard output**:
+     ```bash
+     echo [text]
+     ```
+     Options like `-n` can be used to suppress the trailing newline.
+   - **Export a variable to the environment**:
+     ```bash
+     export VAR_NAME=value
+     ```
+     Adds or updates environment variables.
+   - **Unset an environment variable**:
+     ```bash
+     unset VAR_NAME
+     ```
+     Removes a variable from the environment.
+   - **Display a list of environment variables**:
+     ```bash
+     env
+     ```
+   - **Exit the shell**:
+     ```bash
+     exit [status]
+     ```
+     Ends the shell session. Optionally, an exit status can be provided.
+
 
 ### Additional Features
 
@@ -104,9 +129,3 @@ The prompt will also display the user name. And the $ symbol at the end will cha
   - In prompt, if the USER variable to display is missing, LOGNAME will be used or `minishell` if neither available.
 * Heredoc is fully parsed and tokenized.
 * If multiple input/output files are stated on a command, the very last one will be used.
-
-### Notes
-
-- Ensure all commands used are available in the system's `$PATH`.
-- Properly handle edge cases like invalid input, non-existent files, or incorrect command usage.
-- The shell should exit gracefully when the `exit` command is issued or a termination signal is received.

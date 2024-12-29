@@ -57,7 +57,3 @@ If the arguments are invalid or an error occurs, the program will print an error
 - **Synchronization**: Mutexes are used to protect shared resources like forks and the console output.
 - **Precision**: Time is measured in milliseconds using `gettimeofday()` for accurate delay handling.
 - **Philosopher Death**: The program will print a message when a philosopher dies, and the simulation will stop.
-
-Ensure you test your program with various input values to validate that it behaves as expected in all scenarios, including edge cases like:
-- Very small `time_to_die` values, ensuring philosophers die immediately if not eating.
-- Simulations with only one philosopher, where starvation should occur since they cannot eat.
