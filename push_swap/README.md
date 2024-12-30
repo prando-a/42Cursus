@@ -30,15 +30,23 @@ This program is compiled with a Makefile located in the `push-swap` directory. T
 
 Once compiled, a `push_swap` executable will be generated. Execution is as follows:
 
-`./push_swap [list of integers]`
+```bash
+./push_swap [list of integers]
+```
 
 * Pro test tip: You can use the `shuf`command to generate unique numbers and count movements this way:
 
 1. Store numbers in a shell variable:
-`ARG=$(shuf -i 1-100 -n 10 | tr '\n' '`
+``` bash
+ARG=$(shuf -i 1-100 -n 10 | tr '\n' ' ')
+```
 This creates a variable containing (as the example says) 10 numbers in a range from 1 to 100 separated by spaces with `tr` since shuf does by newlines.
 
 2. Variable can now be used as arguments for push_swap
-`./push_swap $ARG` 
-3. The output of every movement can be redirected to be counted `wc`.
-`./push_swap $ARG | wc -l`
+```bash
+./push_swap $ARG
+```
+3. The output of every movement can be redirected to be counted with `wc`: 
+``` bash
+./push_swap $ARG | wc -l
+```

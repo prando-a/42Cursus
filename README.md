@@ -55,7 +55,7 @@ Last common-core project. A clone of the classic Pong game has to be implemented
 
 The areas covered by the projects include:
 
-1. **Algorithms and Data Structures** ():  
+1. **Algorithms and Data Structures** ([push_swap](https://github.com/prando-a/42Cursus/tree/master/push_swap)):  
    - Learning to design and optimize efficient algorithms.  
    - Handling and applying various data structures (lists, stacks, queues, trees, graphs, etc.).
 
@@ -67,12 +67,12 @@ The areas covered by the projects include:
    - Programming focused on direct interaction with the machine and the operating system.  
    - In-depth knowledge of memory management, process handling, threads, and synchronization (mutexes, semaphores).
 
-4. **Operating Systems and Linux Administration** ([pipex](https://github.com/prando-a/42Cursus/tree/master/pipex), [minishell](https://github.com/prando-a/42Cursus/tree/master/minishell)):  
+4. **Operating Systems and Linux Administration** ([pipex](https://github.com/prando-a/42Cursus/tree/master/pipex), [minishell](https://github.com/prando-a/42Cursus/tree/master/minishell), [inception](https://github.com/prando-a/42Cursus/tree/master/inception)):  
    - Deepening knowledge of how operating systems work, especially in Linux environments.  
    - Managing processes, memory, files, and devices.  
    - Using terminal tools, scripting, user management, permissions, and networking.
 
-5. **Computer Networking** ([ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc), ):  
+5. **Computer Networking** ([ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc), [inception](https://github.com/prando-a/42Cursus/tree/master/inception)):  
    - Learning how computers communicate over networks.  
    - Using protocols and tools such as sockets, TCP/IP, UDP, HTTP, etc.
 
@@ -80,7 +80,7 @@ The areas covered by the projects include:
    - Creating multi-threaded and multi-tasking applications. 
    - Implementing synchronization and managing shared resources.
 
-7. **Testing and Debugging** ([libft library](https://github.com/prando-a/42Cursus/tree/master/libft)):  
+7. **Testing and Debugging** ([libft](https://github.com/prando-a/42Cursus/tree/master/libft)):  
    - Developing good practices for testing, debugging, and optimizing code.  
    - Using tools such as gdb, Valgrind, and others.
 
