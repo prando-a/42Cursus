@@ -45,8 +45,8 @@ This project regards the use of [docker-compose](https://docs.docker.com/compose
 ### [ft_irc](https://github.com/prando-a/42Cursus/tree/master/ft_irc)
 The only major C++ project in common-core, this time about building a IRC Chat server setting its own socket, bind the connection and listen through a given port on arguments. The server has to handle multiple client sockets connection with [poll()](https://pubs.opengroup.org/onlinepubs/009696799/functions/poll.html) or [select()](https://man7.org/linux/man-pages/man2/select.2.html) and then give an IRC chat service including channels with a bunch of modes activated, permission and access managing among users, follow the protocol for regular IRC clients (used [Hexchat](https://hexchat.github.io/) as reference) and allowing connection via netcat). [@pepe587](https://github.com/pepe587) contributed to the project building most server commands.
 
-### [ft_transcendence]() (Currently in development)
-Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend, frontend, users database and auth system modules using a docker-compose. There is certain freedom on choosing the language for every module, and a bunch of base-mandatory parts. More info and code will be available when it is complete. Our team is working hard on it.
+### [ft_transcendence](https://github.com/prando-a/ft_transcendence)
+Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend using Node.js, frontend using TypeScript, users database with SQLite and auth system modules (including Google OAuth login) using a docker-compose. There is certain freedom on choosing modules which may include several services regarding game, user customization and management, monitorization, etc., and a bunch of base-mandatory parts. 
 
 ----------------------------------------------
 ----------------------------------------------
