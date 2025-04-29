@@ -1,0 +1,3 @@
+[submodule "ft_transcendence"]
+	path = ft_transcendence
+	url = https://github.com/prando-a/ft_transcendence.git
