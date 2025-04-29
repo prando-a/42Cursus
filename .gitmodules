@@ -1,3 +1,12 @@
 [submodule "ft_transcendence"]
 	path = ft_transcendence
 	url = https://github.com/prando-a/ft_transcendence.git
+[submodule "cub3D"]
+	path = cub3D
+	url = https://github.com/prando-a/cub3D
+[submodule "minishell"]
+	path = minishell
+	url = https://github.com/prando-a/minishell.git
+[submodule "ft_irc"]
+	path = ft_irc
+	url = https://github.com/prando-a/ft_irc.git
