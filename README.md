@@ -1,6 +1,6 @@
 # 42Cursus - common-core
-Every project done so far at 42School in Málaga. This made the mastering of coding out of a true life experience, of which I must be grateful. <br>
-Projects are mostly related to from basic to advanced C / C++ programming. Some projects have strong influence on bash language, environment and system-managing. Every project includes a README.md fully documenting it (Work in progress as of 2024/12/29). [Skills acquired are in this section](#skills-learnt)
+Every project done at 42 in Málaga during Cadet stage (common-core students). This made the mastering of coding out of a true life experience, of which I must be grateful. <br>
+Projects are mostly related to from basic to advanced C / C++ programming. Some projects have strong influence on bash language, environment and system-managing. Every project includes a README.md fully documenting it. [Skills acquired are in this section](#skills-learnt)
 
 
 ## Summary
@@ -46,7 +46,7 @@ This project regards the use of [docker-compose](https://docs.docker.com/compose
 The only major C++ project in common-core, this time about building a IRC Chat server setting its own socket, bind the connection and listen through a given port on arguments. The server has to handle multiple client sockets connection with [poll()](https://pubs.opengroup.org/onlinepubs/009696799/functions/poll.html) or [select()](https://man7.org/linux/man-pages/man2/select.2.html) and then give an IRC chat service including channels with a bunch of modes activated, permission and access managing among users, follow the protocol for regular IRC clients (used [Hexchat](https://hexchat.github.io/) as reference) and allowing connection via netcat). [@pepe587](https://github.com/pepe587) contributed to the project building most server commands.
 
 ### [ft_transcendence](https://github.com/prando-a/ft_transcendence)
-Last common-core project. A clone of the classic Pong game has to be implemented with its corresponding backend using Node.js, frontend using TypeScript, users database with SQLite and auth system modules (including Google OAuth login) using a docker-compose. There is certain freedom on choosing modules which may include several services regarding game, user customization and management, monitorization, etc., and a bunch of base-mandatory parts. 
+Last common-core project. A huge leap far from everything seen before. Consists on a full-stack app regarding a clone of the classic Pong game which has to be implemented with its corresponding backend using Node.js, frontend using TypeScript, users database with SQLite and auth system modules (including Google OAuth login) using a docker-compose. There is certain freedom on choosing modules which may include several services regarding game, user customization and management, monitorization, etc., and a bunch of base-mandatory parts. 
 
 ----------------------------------------------
 ----------------------------------------------
